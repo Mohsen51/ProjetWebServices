@@ -22,7 +22,9 @@
 ## GET lois d’un pays :
 
 **Type** : Get
+
 **URL** : /api/pays/:NomPays
+
 **Renvoi** : status(200) json : {
 	success : 1,
 	data : { 
@@ -34,10 +36,13 @@
 
 ## Ajouter un voyageur :
 
-Type : Post
+**Type** : Post
+
 **URL** : /api/voyageur/:NomPays
+
 **Envoi** : 
-**Json** : nom, prénom
+Json : nom, prénom
+
 **Renvoi** :
 Succès : status(200) json : {
 	success : 1,
@@ -51,9 +56,12 @@ Erreur : json : {
 ## Changer lois du pays : (à voir ensemble)
 
 **Type** : Put
+
 **URL** : /api/pays/:NomPays
+
 **Envoi** : 
 Json : nouvelle loi
+
 **Renvoi** :
 Succès : status(200) json : {
 	success : 1,
@@ -67,9 +75,12 @@ Erreur : json : {
 ## Retirer voyageur :
 
 **Type** : Delete
+
 **URL** : /api/voyageur
+
 **Envoi** : 
 Json : nom, prénom
+
 **Renvoi** :
 Succès : status(200) json : {
 	success : 1,
