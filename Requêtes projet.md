@@ -1,9 +1,11 @@
-#Requêtes projet
+# Requêtes projet
 
-##GET lois tous les pays :
+## GET lois tous les pays :
 
 **Type** : Get
+
 **URL** : /api/pays
+
 **Renvoi** : status(200) json : {
 	success : 1,
 	data : [{ 
@@ -17,7 +19,7 @@
 		“Voyageurs“ : [a,b,c]
 	}]}
 
-##GET lois d’un pays :
+## GET lois d’un pays :
 
 **Type** : Get
 **URL** : /api/pays/:NomPays
@@ -30,7 +32,7 @@
 }
 }
 
-##Ajouter un voyageur :
+## Ajouter un voyageur :
 
 Type : Post
 **URL** : /api/voyageur/:NomPays
@@ -46,7 +48,7 @@ Erreur : json : {
 	“message” : “Erreur d’ajout de l’utilisateur”
 }
 
-##Changer lois du pays : (à voir ensemble)
+## Changer lois du pays : (à voir ensemble)
 
 **Type** : Put
 **URL** : /api/pays/:NomPays
@@ -62,7 +64,7 @@ Erreur : json : {
 	“message” : “Erreur de modif de la loi du pays”
 }
 
-##Retirer voyageur :
+## Retirer voyageur :
 
 **Type** : Delete
 **URL** : /api/voyageur
