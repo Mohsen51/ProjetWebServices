@@ -1,9 +1,8 @@
-package com.test.metiers.entites;
+package com.api.metiers.entites;
 
 import java.io.Serializable;
 
 public class Pays implements Serializable {
-    private int idPays;
     private String nomPays;
     private String accesPays;
 
@@ -23,16 +22,15 @@ public class Pays implements Serializable {
         this.accesPays = accesPays;
     }
 
-    public int getIdPays() {
-        return idPays;
+    @Override
+    public String toString() {
+        return "Pays{" +
+                "nomPays='" + nomPays + '\'' +
+                ", accesPays='" + accesPays + '\'' +
+                '}';
     }
 
-    public void setIdPays(int idPays) {
-        this.idPays = idPays;
-    }
-
-    public Pays(int idPays, String nomPays, String accesPays) {
-        this.idPays = idPays;
+    public Pays(String nomPays, String accesPays) {
         this.nomPays = nomPays;
         this.accesPays = accesPays;
     }

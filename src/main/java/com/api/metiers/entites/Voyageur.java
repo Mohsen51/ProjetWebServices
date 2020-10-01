@@ -1,4 +1,4 @@
-package com.test.metiers.entites;
+package com.api.metiers.entites;
 
 import java.io.Serializable;
 
@@ -7,6 +7,14 @@ public class Voyageur implements Serializable {
     private String nomVoyageur;
     private String prenomVoyageur;
     private Pays pays;
+
+    public Voyageur() {
+    }
+
+    public Voyageur(String nomVoyageur, String prenomVoyageur) {
+        this.nomVoyageur = nomVoyageur;
+        this.prenomVoyageur = prenomVoyageur;
+    }
 
     public Voyageur(int idVoyageur, String nomVoyageur, String prenomVoyageur, Pays pays) {
         this.idVoyageur = idVoyageur;

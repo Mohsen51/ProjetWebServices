@@ -1,4 +1,4 @@
-package com.test.test;
+package com.api.test;
 
 
 import org.glassfish.jersey.server.ResourceConfig;
@@ -11,7 +11,6 @@ import javax.ws.rs.ApplicationPath;
 public class AppConfig extends ResourceConfig
 {
     public AppConfig() {
-
         packages("com.test.resources");
     }
 }
