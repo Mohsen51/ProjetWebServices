@@ -1,4 +1,4 @@
-package com.api.metiers.entites;
+package com.test.metiers.entites;
 
 import java.io.Serializable;
 

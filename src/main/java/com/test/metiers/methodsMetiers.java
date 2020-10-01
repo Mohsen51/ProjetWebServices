@@ -1,6 +1,6 @@
-package com.api.metiers;
+package com.test.metiers;
 
-import com.api.metiers.entites.*;
+import com.test.metiers.entites.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;

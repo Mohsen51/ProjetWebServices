@@ -1,8 +1,8 @@
-package com.api.resources;
+package com.test.resources;
 
-import com.api.metiers.*;
-import com.api.metiers.entites.Pays;
-import com.api.metiers.entites.Voyageur;
+import com.test.metiers.*;
+import com.test.metiers.entites.Pays;
+import com.test.metiers.entites.Voyageur;
 
 import javax.inject.Singleton;
 import javax.ws.rs.*;

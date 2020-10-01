@@ -1,4 +1,4 @@
-package com.api.test;
+package com.test.test;
 
 
 import org.glassfish.jersey.server.ResourceConfig;
