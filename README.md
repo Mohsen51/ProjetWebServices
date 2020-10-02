@@ -18,16 +18,10 @@ Once it's installed the jar executable file will be created in the newly created
 
 **Launch the server** 
 
-To launch the server go in the target folder.
+To launch the server run a maven execution in java.
 
 ```bat
-cd target
-```
-
-From here you can launch the jar file with the following :
-
-```bat
-java -jar test-0.0.1-SNAPSHOT.jar
+mvn.cmd exec:java -Dexec.mainClass=com.test.test.TestApplication
 ```
 
 # Congratulation the server is launched
