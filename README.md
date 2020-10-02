@@ -21,7 +21,7 @@ Once it's installed the jar executable file will be created in the newly created
 To launch the server run a maven execution in java.
 
 ```bat
-mvn.cmd exec:java -Dexec.mainClass=com.test.test.TestApplication
+mvnw.cmd exec:java -Dexec.mainClass=com.test.test.TestApplication
 ```
 
 # Congratulation the server is launched
