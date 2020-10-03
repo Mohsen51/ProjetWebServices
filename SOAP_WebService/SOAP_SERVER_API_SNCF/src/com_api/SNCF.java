@@ -72,6 +72,14 @@ public class SNCF {
 		}*/
 	}
 	
+	public SNCF (int n) {
+		
+		int temp = n;
+		
+		
+		
+	}
+	
 	public static int getReturnCode () {
 		try {
 			return api_con.getResponseCode();
