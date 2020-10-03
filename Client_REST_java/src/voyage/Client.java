@@ -38,35 +38,9 @@ public class Client {
 	
 	public static void main(String[] args) {
 		Requete rq = new Requete();
-		Scanner sc = new Scanner(System.in);
 		String s = "";
-		while (!s.equals("exit")) {
-			System.out.println("Que voulez-vous faire :\n"
-					+ "ins : inscription\n"
-					+ "des : desinscription\n"
-					+ "inf : information\n"
-					+ "mod : modification des regles d'un pays\n");
-			s = sc.nextLine();
-			if (s.equals("ins")) {
-				Voyageur v = inscription (sc);
-				System.out.println(v);
-			} else if (s.equals("des")) {
-				desinscription ();
-			} else if (s.equals("inf")) {
-				informations (sc, rq);
-			} else if (s.equals("mod")) {
-				modification ();
-			}
-		}
 		
-//		Voyageur antoine = new Voyageur ("Antoine", "Dutest", 21, "antoine.dutest@efrei.net");
-//		Voyageur simon = new Voyageur ("Simon", "Tancev", 20, "simon.tancev@efrei.net");
-//		ArrayList<Voyageur> list_v = new ArrayList<Voyageur>();
-//		list_v.add(antoine);
-//		list_v.add(simon);
-//		Pays fr = new Pays ("France", 0, list_v);
-//		System.out.println(fr);
-	sc.close();	
+		rq.print_requete(s);
 	}
 
 }

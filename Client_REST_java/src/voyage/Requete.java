@@ -11,7 +11,7 @@ public class Requete {
 	
 	public Requete () {
 		client = Client.create();
-		domaine = "http://localhost:8080/api/";
+		domaine = "https://api.covid19api.com/summary";
 	}
 	
 	public void get_pays(String s) {
@@ -31,12 +31,12 @@ public class Requete {
 		return s;
 	}
 	
-	private void print_requete (String s) {
+	public void print_requete (String s) {
 		WebResource webResource = client.resource(domaine+s);
 		ClientResponse response = webResource.accept("application/json").get(ClientResponse.class);
 		
 		if (response.getStatus() != 200) {
-			System.out.println("La requête a échoué : " + response.getStatus());
+			System.out.println("La requï¿½te a ï¿½chouï¿½ : " + response.getStatus());
 			String error= response.getEntity(String.class);
 			System.out.println("Error: "+error);
 			return;
