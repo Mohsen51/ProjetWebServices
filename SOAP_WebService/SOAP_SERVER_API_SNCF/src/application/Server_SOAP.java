@@ -11,7 +11,7 @@ public class Server_SOAP {
 	
 	public static void main(String[] args) throws IOException {
 		
-		SNCF api = new SNCF();
+		SNCF client_rest_api = new SNCF();
 	
 		String URL="http://localhost:7777/";
 		Endpoint.publish(URL, new MobilityService());
