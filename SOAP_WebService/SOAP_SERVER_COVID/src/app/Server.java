@@ -12,6 +12,8 @@ public class Server {
 public static void main(String[] args) throws IOException {
 		
 		API client_rest_api = new API();
+		//client_rest_api.requestAPI("summary");
+		//client_rest_api.print_requete();
 	
 		String URL="http://localhost:7777/";
 		Endpoint.publish(URL, new Services());
