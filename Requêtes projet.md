@@ -90,4 +90,3 @@ Erreur : json : {
 	success : 0,
 	“message” : “Erreur de suppression de l’utilisateur de la base”
 }
-
