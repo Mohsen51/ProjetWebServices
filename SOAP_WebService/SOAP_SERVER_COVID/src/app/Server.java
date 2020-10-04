@@ -15,7 +15,7 @@ public static void main(String[] args) throws IOException {
 		//client_rest_api.requestAPI("summary");
 		//client_rest_api.print_requete();
 	
-		String URL="http://localhost:7777/";
+		String URL="http://localhost:7777/?wsdl";
 		Endpoint.publish(URL, new Services());
 		System.out.println("SERVEUR : "+URL);
 	}
