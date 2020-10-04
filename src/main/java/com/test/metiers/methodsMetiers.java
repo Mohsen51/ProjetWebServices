@@ -74,8 +74,15 @@ public class methodsMetiers {
 
     //Creation des objets pays et leurs règles
     public void creationPays() {
-        addPays(new Pays("Allemagne","PCR"));
-        addPays(new Pays ("France","PCR"));
-        addVoyageur(new Voyageur("Jean" , "Jan"), "Allemagne");
+        addPays(new Pays("Allemagne","Test PCR à l'entrée"));
+        addPays(new Pays ("France","Pas de restriction entre les regions françaises"));
+        addPays(new Pays ("Espagne","Ouvert"));
+        addPays(new Pays ("Italie","Ouvert"));
+        addPays(new Pays ("Monaco","Ouvert"));
+        addPays(new Pays ("Andorre","Ouvert"));
+        addPays(new Pays ("Belgique","Ouvert"));
+        addPays(new Pays ("Suisse","Test PCR à l'entrée"));
+        addPays(new Pays ("RoyaumeUni","Isolement de 14jours à l'entrée"));
+        addVoyageur(new Voyageur("Dupont" , "Jean"), "Allemagne");
     }
 }
