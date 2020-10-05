@@ -60,6 +60,7 @@ public class Resource {
         return metier.addVoyageur(v, nomPays);
     }
 
+    //Supprime un utilisateur
     @DELETE
     @Path("voyageurs/{idVoyageur}")
     @Produces({MediaType.APPLICATION_JSON})
@@ -67,14 +68,14 @@ public class Resource {
         return metier.deleteVoyageur(idVoyageur);
     }
 
-    //A revoir
+    //Update le pays de destination d'un voyageur
     @PUT
     @Path("voyageurs/{idUser}")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_JSON})
-    public Voyageur changeVoyageur(String p, @PathParam("idUser") Integer idVoyageur) {
+    public Voyageur changeVoyageur(Pays p, @PathParam("idUser") Integer idVoyageur) {
         Voyageur v = metier.getVoyageur(idVoyageur);
         metier.deleteVoyageur(idVoyageur);
-        return metier.addVoyageur(v, p);
+        return metier.addVoyageur(v, p.getNomPays());
     }
 }
