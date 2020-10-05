@@ -75,7 +75,6 @@ public class Resource {
     @Produces({MediaType.APPLICATION_JSON})
     public Voyageur changeVoyageur(Pays p, @PathParam("idUser") Integer idVoyageur) {
         Voyageur v = metier.getVoyageur(idVoyageur);
-        metier.deleteVoyageur(idVoyageur);
-        return metier.addVoyageur(v, p.getNomPays());
+        return metier.updateVoyageur(v, p.getNomPays(), idVoyageur);
     }
 }

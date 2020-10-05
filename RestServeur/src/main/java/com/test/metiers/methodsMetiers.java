@@ -41,7 +41,7 @@ public class methodsMetiers {
             throw new RuntimeException("Le voyageur n'existe pas");
     }
 
-    //Méthode d'ajout de voyageur (On va l'utiliser pour le POST et le PUT)
+    //Méthode d'ajout de voyageur (On va l'utiliser pour le POST)
     public Voyageur addVoyageur(Voyageur v, String nomPays){
         int id = voyageurs.size()+1;
         v.setIdVoyageur(id);
@@ -57,7 +57,7 @@ public class methodsMetiers {
         return p;
     }
 
-    //Méthode qui utilise la methode de suppression de Map (utilisée pour PUT et DELETE)
+    //Méthode qui utilise la methode de suppression de Map (utilisée pour DELETE)
     public int deleteVoyageur(Integer idVoyageur){
         if (voyageurs.get(idVoyageur)==null)
         {
@@ -71,6 +71,25 @@ public class methodsMetiers {
             return 1;
         }
     }
+
+    //Méthode de mise à jour (utilisée pour PUT)
+    public Voyageur updateVoyageur(Voyageur v, String nomPays, Integer idVoyageur){
+        if (voyageurs.get(idVoyageur)==null)
+        {
+            //Gestion de l'exception voyageur inexistant
+            throw new RuntimeException("Le voyageur n'existe pas");
+        }
+        else
+        {
+            //methode de modification d'une occurence dans map
+            voyageurs.remove(idVoyageur);
+            Pays p = pays.get(nomPays);
+            v.setPays(p);
+            voyageurs.put(idVoyageur ,v);
+            return v;
+        }
+    }
+
 
     //Creation des objets pays et leurs règles
     public void creationPays() {
