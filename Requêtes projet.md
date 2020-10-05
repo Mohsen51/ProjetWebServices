@@ -64,7 +64,7 @@ erreur:
 
 **Type** : Get
 
-**URL** : /api/pays/:idVoyageur
+**URL** : /api/voyageurs/idVoyageur
 
 **Renvoi** : status(200) json : {
 	"success" : 1,
