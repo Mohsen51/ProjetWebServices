@@ -24,6 +24,8 @@ Installer avec pip :
     pip install lxml
 
 ### Il ne vous reste plus qu'à lancer le code 
+
+#### Ne pas oublier de lancer les serveurs concernés avant de tester le client !
     
 
 
