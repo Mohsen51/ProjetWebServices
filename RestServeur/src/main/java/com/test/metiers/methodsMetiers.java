@@ -1,11 +1,9 @@
 package com.test.metiers;
 
-import com.test.metiers.entites.*;
+import com.test.metiers.entites.Pays;
+import com.test.metiers.entites.Voyageur;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class methodsMetiers {
 
@@ -43,8 +41,13 @@ public class methodsMetiers {
 
     //Méthode d'ajout de voyageur (On va l'utiliser pour le POST)
     public Voyageur addVoyageur(Voyageur v, String nomPays){
-        int id = voyageurs.size()+1;
-        v.setIdVoyageur(id);
+        //Goes into the loop except for the automatically created user
+        if (v.getIdVoyageur()!=1) {
+            Set<Integer> keys = voyageurs.keySet();
+            Integer[] arr = keys.stream().toArray(Integer[]::new);
+            int max = Collections.max(Arrays.asList(arr)) + 1;
+            v.setIdVoyageur(max);
+        }
         Pays p = pays.get(nomPays);
         v.setPays(p);
         voyageurs.put(v.getIdVoyageur(), v);
@@ -102,6 +105,6 @@ public class methodsMetiers {
         addPays(new Pays ("Belgique","Ouvert"));
         addPays(new Pays ("Suisse","Test PCR à l'entrée"));
         addPays(new Pays ("RoyaumeUni","Isolement de 14jours à l'entrée"));
-        addVoyageur(new Voyageur("Dupont" , "Jean"), "Allemagne");
+        addVoyageur(new Voyageur(1, "Dupont" , "Jean"), "Allemagne");
     }
 }

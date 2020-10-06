@@ -16,6 +16,12 @@ public class Voyageur implements Serializable {
         this.prenomVoyageur = prenomVoyageur;
     }
 
+    public Voyageur(int idVoyageur, String nomVoyageur, String prenomVoyageur) {
+        this.idVoyageur = idVoyageur;
+        this.nomVoyageur = nomVoyageur;
+        this.prenomVoyageur = prenomVoyageur;
+    }
+
     public Voyageur(int idVoyageur, String nomVoyageur, String prenomVoyageur, Pays pays) {
         this.idVoyageur = idVoyageur;
         this.nomVoyageur = nomVoyageur;
